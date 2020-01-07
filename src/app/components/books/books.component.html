@@ -1,0 +1,19 @@
+<div class="container mt-5">
+  <div *ngIf="books.length > 0; else noBooks">
+    <ul class="list-group">
+      <li *ngFor="let book of books" class="list-group-item">
+        <b>{{ book.title }}: </b>
+        {{ book.description }}
+      </li>
+    </ul>
+  </div>
+
+  <ng-template #noBooks>
+    <h5>There are no books in the collection</h5>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <b>No Books were found!</b>
+      </li>
+    </ul>
+  </ng-template>
+</div>
